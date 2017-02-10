@@ -5,10 +5,12 @@ let ObjectId = Schema.Types.ObjectId
 let schema = new Schema({
     name: { type: String, required: true },
     description: { type: String },
-    galaxyId: {type: ObjectId, ref: 'Galaxy', required: true}
+    MoonId: {type: ObjectId, ref: 'Planet', required: true}
     // Relationships
 
     
 })
 
-module.exports = mongoose.model('Star', schema)
+
+
+module.exports = mongoose.model('Moon', schema)
